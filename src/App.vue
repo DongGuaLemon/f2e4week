@@ -1,31 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <el-container>
+      <el-header>Header</el-header>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+      <el-footer></el-footer>
+    </el-container>
   </div>
 </template>
 
 <style>
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+}
+.el-container{
+   width: 100%;
+  height: 100vh;
+}
+.el-header {
+  background-color: #fcb0a9;
+  color: #333;
   text-align: center;
-  color: #2c3e50;
+  line-height: 60px;
+  width: 100%;
 }
-#nav {
-  padding: 30px;
+.el-footer {
+  background-color: #fcb0a9;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.el-main {
+  background-color: #fff6f6;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 </style>

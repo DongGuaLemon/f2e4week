@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <div class="shopCardcomponents">
+          <shopCard></shopCard>
+        </div>
+        <div class="stepsCardcomponents">
+          <steps></steps>
+        </div>
+        <div class="payCardcomponents">
+          <router-view></router-view>
+        </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import shopCard from "../components/shopCard";
+import payCard from "../components/payCard";
+import steps from '../components/steps'
 export default {
-  name: 'home',
+  name: "home",
   components: {
-    HelloWorld
+    shopCard,
+    payCard,
+    steps
   }
-}
+};
 </script>
+<style>
+.stepsCardcomponents{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+</style>
+
